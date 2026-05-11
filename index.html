@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Electrifying The East Coast</title>
+  <link rel="stylesheet" href="style_sheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Electrifying The East Coast</h1>
+  <p>Selma Sulejmanovic & Dawn Harris </p>
+  <hr class="dashed">
+  <h2>Introduction</h2>
+  <p>More and more electric vehicles (EVs) are being seen across the United States.
+    Suddenly, the city is populated with cars that arrive before you hear them and dealerships that have embraced this
+    transition.
+    A question becomes increasingly important: How truly accessible is charging infrastructure? EV adoption proceeds to
+    expand, but availability of charging stations and ports remain more varied between the states.
+    Understanding the relationship between EV adoption and charging infrastructure is therefore crucial in uncovering
+    the disparities found throughout the electrification of transportation.
+
+  </p>
+  <h2>Purpose</h2>
+  <p><i>Why are such disparities important to assess?</i>
+    The prominence of electric vehicles is growing quickly, and so is the movement toward more sustainability.
+    By cutting carbon emissions, the United States can establish, and move toward, a more eco-friendly and clean system.
+    The practicality of EV ownership depends on the availability of reliable charging infrastructure, however.
+    In areas of limited and inconsistent distribution, owning an EV feels inconvenient.
+    So despite an increase in interest, EV adoption may be experiencing setbacks. </p>
+
+  <p>Obtaining insight into the relationship between EV adoption and charging accessibility is necessary to figure out
+    how states are adapting to the rapidly changing transportation systems.
+    Gaining an understanding of the correlation between the two helps, for instance, policymakers and companies to make
+    data-driven investments and allocate funds toward environmentally friendly decisions.</p>
+
+  <h2>Process</h2>
+  <p>
+    To properly evaluate the relationship, this project explores the EV and charging infrastructure patterns across the
+    East Coast states in particular (Connecticut, Maine, North Carolina, New Jersey, New York, Virginia, and Vermont.).
+    The larger project started with various raw datasets that consisted of EV registration data, public charging station
+    data, county population data, and ZIP-to-county crosswalk files.
+    All were cleaned and merged for consistency and standardization in order to work with county-level observations from
+    the years 2020 to 2024.
+  </p>
+
+  <p>The cleaning process allowed for ZIP-level datasets (such as the EV registration and charging station data) to be
+    mapped to counties. Population data was reshaped to contain the years 2020 to 2024. Datasets were therefore
+    aggregated into yearly totals. Once all were merged, more metrics were created to obtain a deeper analysis such as
+    EVs per 10,000 people and [charging] ports per 10,000 people.
+  </p>
+
+  <div class="stickynotes l_align">
+    <div class='tableauPlaceholder' id='viz1778265313985' style='position: relative'>
+      <noscript>
+        <a href='#'>
+          <img alt='East Coast Electric Vehicle Counts'
+            src='https://public.tableau.com/static/images/97/97Y2K97M5/1_rss.png' style='border: none' />
+        </a>
+      </noscript>
+
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='path' value='shared/97Y2K97M5' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/97/97Y2K97M5/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+      </object>
+    </div>
+  </div>
+
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1778265313985');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  <div class="b_padding">
+    <p>The choropleth map displays the distribution of EV registration counts across counties on the East Coast states
+      being evaluated. The darker shades account for counties with higher EV registration counts, while lighter shades
+      account for counties with lower counts. Northern Virginia and regions of New York contain substantially more
+      concentrations of EV registrations due to the metropolitan areas. Thus, EV adoption can be linked to both
+      population density and economic/charging development. In many counties, however, EV ownership has expanded over
+      the years.
+    </p>
+  </div>
+  <div class="stickynotes r_align">
+    <iframe src="scatterplot.html" width="100%" height="500">
+    </iframe>
+  </div>
+  <div class="t_padding b_padding">
+    <p>Each state is represented by its own scatterplot, and each point represents a county.
+      A positive relationship suggests infrastructure tends to grow with EV adoption.
+      However, some counties show high demand but low supply, indicating potential infrastructure gaps.
+      Larger counties tend to have both higher EV adoption and more infrastructure.
+      The relationship varies significantly across states, suggesting uneven development.
+    </p>
+  </div>
+
+  <div class="stickynotes l_align">
+     <img src="heatmap.png" width="100%" height="500"> </img>
+  </div>
+  <div class="t_padding b_padding">
+    <p>The correlation heatmap displays the relationship between EV adoption and charging infrastructure variables
+      across East Coast states. The warmer colors represent a much stronger, positive correlation. EV_Count has a
+      moderate correlation with both Population (0.63) and Charging_Ports (0.55), indicating that counties that are more
+      populated and have an increased availability to charging sites tend to have higher EV concentrations. EVs per 10k
+      People and Stations per 10k People also have a positive relationship (0.47), suggesting that charging station
+      counts may similarly be contributing to EV adoption rates. Notably, Stations per 10k People display a very weak
+      relationship (represented by lighter colors) with total population, meaning that charging stations are not evenly
+      available based on county size. We can conclude that there is ultimately an overall positive relationship between
+      EV adoption and charging infrastructure, but accessibility varies significantly between the states.</p>
+  </div>
+  <div class="stickynotes r_align">
+    ​​<div class='tableauPlaceholder' id='viz1778467136315' style='position: relative'><noscript><a href='#'><img
+            alt='Charging Infrastructure Accessibility Across East Coast States '
+            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;LineGraph_17784668245260&#47;Sheet1&#47;1_rss.png'
+            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='LineGraph_17784668245260&#47;Sheet1' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image'
+          value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;LineGraph_17784668245260&#47;Sheet1&#47;1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+        <param name='filter' value='showOnboarding=true' />
+      </object></div>
+    <script
+      type='text/javascript'>                  
+       var divElement = document.getElementById('viz1778467136315');
+       var vizElement = divElement.getElementsByTagName('object')[0]; 
+       vizElement.style.width = '100%';
+       vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; 
+       var scriptElement = document.createElement('script'); 
+       scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+       vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+    </script>
+  </div>
+  <div class="t_padding b_padding">
+    <p>The line graph evaluates how charging infrastructure accessibility, measured by stations per 10,000 people,
+      changed across East Coast states between 2020 and 2024. There is a general upward trend for all states examined,
+      suggesting a steady expansion of stations. New York had the largest jump notably after 2021, as well as Virginia
+      and North Carolina. Other states, such as New Jersey and Connecticut, experienced a much slower growth. The
+      visualization represents the inconsistent accessibility to charging stations between the counties as some invest
+      in infrastructure much more rapidly, thus affecting EV adoption.
+    </p>
+  </div>
+</body>
+</html>

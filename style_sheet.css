@@ -1,0 +1,71 @@
+.stickynotes {
+  position:relative;
+  width: 850px;
+  min-height: 600px;
+  margin: 25px auto;
+  padding: 30px 15px 15px 15px;
+  background: #F8EFA2;
+  font-family: "Lexend", sans-serif; 
+
+  transform: rotate(-0.8deg);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+}
+
+.note-content {
+  width: 100%;
+  height: 100%;
+}
+hr.dashed {
+  border-top: 3px dashed #a9a8a8;
+  width: 80%;
+}
+
+body{
+  font-family: "Lexend", sans-serif; 
+  color: #1d1d1d;
+  margin: 0;
+  min-height: 100%;
+  background: linear-gradient(#b4d9e9bd 10%, #fffffddf 10%),
+              linear-gradient(to right, #ebf8e100 10%, #f47f7f 10% 10.2%, #ebf8e100 10.5%);
+  background-size: 100% 40px, 100% 100%;
+  background-repeat: repeat, no-repeat;
+}
+
+.l_align{
+  margin-left: 50px;
+ 
+}
+
+.r_align{
+  margin-right: 50px;
+  
+}
+
+
+.t_padding{
+  padding-top: 2%;
+}
+
+.b_padding{
+  padding-bottom: 0%;
+}
+
+
+h1{
+  font-size: 80px;
+  padding-left: 10%;
+}
+
+h2{
+  font-size: 40px;
+  padding-left: 10%;
+
+}
+
+p{
+  padding-left: 10%;
+  padding-bottom: 10%;
+  font-size: 30px;
+}
+
